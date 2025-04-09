@@ -21,5 +21,6 @@ with smtplib.SMTP(host='smtp.gmail.com', port=587) as smtp:
     smtp.ehlo()
     smtp.starttls()
     smtp.login('sender email address', 'sender email password')
+    # if it is gmail account, you should do the 2 step verification and get the application password.
     smtp.send_message(email)
     print('Email has been sent!')
